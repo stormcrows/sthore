@@ -1,0 +1,14 @@
+{
+  "extends": "eslint:recommended",
+  "rules": {
+    "quotes": ["error", "double"]
+  },
+  "env": {
+    "jest": true,
+    "commonjs": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  }
+}

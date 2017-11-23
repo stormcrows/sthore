@@ -1,0 +1,42 @@
+{
+  "name": "sthore",
+  "version": "0.0.1",
+  "description": "Generator powered store; supports custom middlewares and action listeners.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "ci": "jest --ci --testResultsProcessor='./node_modules/jest-junit-reporter'"
+  },
+  "keywords": [
+    "store",
+    "dispatcher",
+    "redux",
+    "middleware",
+    "actions",
+    "generators",
+    "promise",
+    "async",
+    "tested"
+  ],
+  "author": "stormcrows",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stormcrows/sthore.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stormcrows/sthore/issues"
+  },
+  "homepage": "https://github.com/stormcrows/sthore#readme",
+  "maintainers": [
+    {
+      "name": "stormcrows",
+      "email": "stormingcrows@gmail.com"
+    }
+  ],
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "jest-junit-reporter": "^1.1.0"
+  }
+}
