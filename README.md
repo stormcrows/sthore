@@ -20,19 +20,24 @@ const sthore = Sthore(initialState);
 
 // pre will get called before any of the actions are processed
 sthore.use("pre", (actionName, payload) => {
-    console.log("pre-middleware logger", action, payload)
+  console.log("pre-middleware logger", actionName, payload);
 });
 
 // post are called right after all actions have been processed
 sthore.use("post", (actionName, payload) => {
-    console.log("post-middleware logger", action, payload)
+  console.log("post-middleware logger", actionName, payload);
 });
 
 // state changed action
 
-sthore.on(STATE_CHANGED, ({ key, value, oldValue }) => {
-    console.log("state changed: ", key, value, oldValue);
-});
+sthore.on(STATE_CHANGED, ({ key, value, oldValue }) =>
+  console.log("state changed:", key, value, oldValue)
+);
+
+sthore.setState("someKey", "someValue");
+// -> state changed: someKey someValue undefined
+sthore.setState("someKey", "someNewValue");
+// -> state changed: someKey someNewValue someValue
 
 // custom action
 
@@ -49,7 +54,7 @@ sthore.removeListener(actionName, customAction);
 // action loader
 
 const { actionLoader } = require("sthore");
-const actions = actionLoader("./actions/");
+const actions = actionLoader(__dirname + "/actions");
 
 Object.keys(actions).forEach(name => sthore.on(name, actions[name]));
 ```

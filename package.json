@@ -1,12 +1,14 @@
 {
   "name": "sthore",
-  "version": "0.0.1",
-  "description": "Generator powered store; supports custom middlewares and action listeners.",
+  "version": "0.0.2",
+  "description":
+    "Generator powered store; supports custom middlewares and action listeners.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "ci": "jest --ci --testResultsProcessor='./node_modules/jest-junit-reporter'"
+    "ci":
+      "jest --ci --testResultsProcessor='./node_modules/jest-junit-reporter'"
   },
   "keywords": [
     "store",
