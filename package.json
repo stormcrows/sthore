@@ -1,6 +1,6 @@
 {
   "name": "sthore",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Generator powered store; supports custom middlewares and action listeners.",
   "main": "index.js",
   "scripts": {
